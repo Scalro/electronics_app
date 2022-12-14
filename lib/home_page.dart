@@ -1,6 +1,7 @@
 import 'package:electronics_app/screens/account.dart';
 import 'package:electronics_app/screens/produts.dart';
 import 'package:electronics_app/screens/settings.dart';
+import 'package:electronics_app/screens/user_profile.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -68,7 +69,12 @@ class _HomePageState extends State<HomePage> {
                 ),
                 ListTile(
                   leading: const Icon(Icons.person),
-                  onTap: () => () {},
+                  onTap: () {
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                         return const UserProfile();
+                    }));
+                  },
                   title: const Text('User Profile'),
                 ),
               ],
