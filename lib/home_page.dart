@@ -1,7 +1,7 @@
+import 'package:electronics_app/screens/account.dart';
+import 'package:electronics_app/screens/produts.dart';
+import 'package:electronics_app/screens/settings.dart';
 import 'package:flutter/material.dart';
-import 'package:prac_one/screens/account.dart';
-import 'package:prac_one/screens/produts.dart';
-import 'package:prac_one/screens/settings.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
