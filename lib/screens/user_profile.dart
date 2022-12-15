@@ -2,6 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../home_page.dart';
+import 'account.dart';
+import 'settings.dart';
+
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
 
@@ -14,23 +18,30 @@ class _UserProfileState extends State<UserProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Update Your Profile', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
+        title: const Text(
+          'Update Your Profile',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             TextFormField(
-              decoration:  InputDecoration(
+              decoration: InputDecoration(
                 label: const Text('Enter Your Full Name'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             TextFormField(
               decoration: InputDecoration(
                 label: const Text('Enter Your Email'),
@@ -65,12 +76,50 @@ class _UserProfileState extends State<UserProfile> {
               height: 20,
             ),
             OutlinedButton(
-              onPressed: () {},
-               child: const Text('Update'),
-               ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Account()));
+              },
+              child: const Text('Update'),
+            ),
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ));
+            },
+          ),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: const Icon(Icons.account_box),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Account();
+                }));
+              },
+            ),
+            label: 'Acount'),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: const Icon(Icons.settings),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Settings();
+                }));
+              },
+            ),
+            label: 'settings')
+      ]),
     );
   }
 }

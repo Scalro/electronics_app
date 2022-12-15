@@ -1,3 +1,4 @@
+import 'package:electronics_app/screens/main_homepage.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -9,13 +10,11 @@ class CosmeticsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       title: 'Electronics App',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const MainHomePage(),
     );
   }
 }
-
-
