@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -78,48 +77,14 @@ class _UserProfileState extends State<UserProfile> {
             OutlinedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Account()));
+                    MaterialPageRoute(builder: (context) => const Account()));
               },
               child: const Text('Update'),
             ),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-          icon: IconButton(
-            icon: const Icon(Icons.home),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ));
-            },
-          ),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-            icon: IconButton(
-              icon: const Icon(Icons.account_box),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const Account();
-                }));
-              },
-            ),
-            label: 'Acount'),
-        BottomNavigationBarItem(
-            icon: IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const Settings();
-                }));
-              },
-            ),
-            label: 'settings')
-      ]),
+
     );
   }
 }

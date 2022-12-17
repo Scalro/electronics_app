@@ -1,6 +1,4 @@
-import 'package:electronics_app/screens/account.dart';
 import 'package:electronics_app/screens/produts.dart';
-import 'package:electronics_app/screens/settings.dart';
 import 'package:electronics_app/screens/user_profile.dart';
 import 'package:flutter/material.dart';
 

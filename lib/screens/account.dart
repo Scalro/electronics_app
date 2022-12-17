@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../home_page.dart';
-import 'settings.dart';
 
 class Account extends StatefulWidget {
   const Account({super.key});

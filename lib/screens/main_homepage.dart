@@ -1,8 +1,6 @@
 import 'package:electronics_app/screens/account.dart';
 import 'package:electronics_app/screens/settings.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../home_page.dart';
 
@@ -14,7 +12,7 @@ class MainHomePage extends StatefulWidget {
 }
 
 class _MainHomePageState extends State<MainHomePage> {
-  List pages = [HomePage(), Account(), Settings()];
+  List pages = [const HomePage(), const Account(), const Settings()];
   int selectedItem = 0;
 
   void _onTap(int index) {
@@ -30,7 +28,7 @@ class _MainHomePageState extends State<MainHomePage> {
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedItem,
           onTap: _onTap,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
